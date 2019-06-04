@@ -1,2 +1,2 @@
-# wheatdesign
-My homepage, basically.
+# wheatdesign.com
+My homepage, basically. http://wheatdesign.com
