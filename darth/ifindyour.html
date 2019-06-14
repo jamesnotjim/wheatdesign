@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>wheatdesign.com | i find your . . .</title>
+		<!-- Facebook Metadata -->
+		<meta property="og:url" content="http://wheatdesign.com/darth/ifindyour.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="I find your lack of ___ disturbing." />
+		<meta property="og:description" content="Darth finds your lack of many things disturbing." />
+		<meta property="og:image" content="http://wheatdesign.com/darth/darth.jpg" />
+
+		
+		<!-- Include Google Fonts --> 
+		<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">		
+		<!-- Include jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<!-- Select/Insert random word from list -->
+		<script type="text/javascript">
+		$( document ).ready(function() {
+			var words = ['faith','sausages','french fries','bass','integrity','taste','Black Sabbath',
+		    'Cthulhu','awesomeness','bears','beer','punctuation','pants','beard','win','pancakes', 
+		    'funk','subject-verb agreement','human-readable variable names','free WiFi&trade;', 
+		    'Axe&reg; Body Spray','an appreciation for personal space','voting record','teeth','yodels', 
+		    'spine', 'rhythm','a Devo hat','opposable thumbs', 'wildebeest', 'prequels', 'plinth', 'humbuckers', 
+		    'single coils','sprinkles','coffee','covfefe','dank memes', 'honky tonks','biscuits'];
+		
+		    var getRandomWord = function () {
+		      return words[Math.floor(Math.random() * words.length)];
+		    };
+		    
+		    $(function() { 
+			  setInterval(function(){
+			    $('.textbox').fadeOut(500, function(){
+			      $(this).html(getRandomWord()).fadeIn(500);
+			    });
+			  }, 3000);
+			});
+		    
+			var lack = 'faith';
+        	$('.msg').html('I find your lack of ' + lack + ' disturbing.');
+        	$('.wordCount').html(words.length);
+      	});
+		</script>
+		
+		<style>
+		body {
+			background-color: black;
+		}
+		#outer {
+			width: 100%;
+		}
+		#inner {
+		 	width: 75%;
+		 	margin: 0 auto;
+		}
+  		p {
+	  		margin: 0px;
+	  		color: lightgray;
+      		font-size: 30px;
+	  		font-family: 'Play', sans-serif;
+  		}
+  		p.count {
+	  		margin-top: 100px;
+	  		color: darkgray;
+	  		font-size: 10px;
+  		}
+  		img {
+	  		width: 100%;
+	  		margin: 0px;
+  		}
+      	</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="inner">
+				<img src="darth.jpg"><br />
+				<p>I find your lack of <span class="textbox">faith</span> disturbing.</p>
+				
+				<p class='count'>There are currently <span class="wordCount"></span> things that disturb Lord Vader.</p>
+			</div>
+		</div>
+	</body>
+</html>
